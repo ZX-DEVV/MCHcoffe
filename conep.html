@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smooth Sliding Boxes</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    .container {
+      display: flex;
+      width: 300%;
+      height: 100vh;
+      animation: smooth-slide 6s infinite ease;
+    }
+   
+    @keyframes smooth-slide {
+      0%, 20% {
+        transform: translateX(0);
+      }
+      33.33%, 53.33% {
+        transform: translateX(-100vw);
+      }
+      66.66%, 86.66% {
+        transform: translateX(-200vw);
+      }
+      100% {
+        transform: translateX(-200vw);
+      }
+    }
+    .magic{
+        height: 60rem;
+        width: 100vw;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box box1"><img class="magic" src="/img/banner.jpg" alt=""></div>
+    <div class="box box2"><img class="magic" src="/img/blog-3.jpg" alt=""></div>
+    <div class="box box3"><img class="magic" src="/img/gallery2.jpg" alt=""></div>
+  </div>
+</body>
+</html>

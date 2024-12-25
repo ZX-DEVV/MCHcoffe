@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MOUHCINE Coffee  Order</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-image: url(img/gallery1.jpg) ;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #4a2c2a;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            margin-bottom: 15px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #6f4e37;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #5a3d2b;
+        }
+        .coffee-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .coffee-option {
+            flex: 1 0 calc(50% - 5px);
+            display: flex;
+            align-items: center;
+        }
+        .coffee-option input {
+            margin-right: 5px;
+        }
+        @media (max-width: 480px) {
+            .coffee-option {
+                flex: 1 0 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MOUHCINE Coffee  Order</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+           
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label>Select your coffee:</label>
+            <div class="coffee-options">
+                <div class="coffee-option">
+                    <input type="checkbox" id="espresso" name="coffee" value="espresso">
+                    <label for="espresso">Espresso</label>
+                </div>
+                <div class="coffee-option">
+                    <input type="checkbox" id="cappuccino" name="coffee" value="cappuccino">
+                    <label for="cappuccino">Cappuccino</label>
+                </div>
+                <div class="coffee-option">
+                    <input type="checkbox" id="latte" name="coffee" value="latte">
+                    <label for="latte">Latte</label>
+                </div>
+                <div class="coffee-option">
+                    <input type="checkbox" id="americano" name="coffee" value="americano">
+                    <label for="americano">Americano</label>
+                </div>
+                <div class="coffee-option">
+                    <input type="checkbox" id="Irish cofee" name="Irish cofee" value="Irish cofee">
+                    <label for="Irish cofee">Irish cofee</label>
+                </div>
+                <div class="coffee-option">
+                    <input type="checkbox" id="Cafe Noir" name="Cafe Noir" value="latte">
+                    <label for="latte">Cafe Noir</label>
+                </div>
+                <div class="coffee-option">
+                    <input type="checkbox" id="latte" name="coffee" value="latte">
+                    <label for="latte">Cafe Grand Tass</label>
+                </div>
+                <div class="coffee-option">
+                    <input type="checkbox" id="latte" name="coffee" value="latte">
+                    <label for="latte">Cafe Frappe</label>
+                </div>
+                <div class="coffee-option">
+                    <input type="checkbox" id="latte" name="coffee" value="latte">
+                    <label for="latte">Café Loco</label>
+                </div>
+                <div class="coffee-option">
+                    <input type="checkbox" id="latte" name="coffee" value="latte">
+                    <label for="latte">Cafe Magic</label>
+                </div>
+            </div>
+
+            <label for="size">Size:</label>
+            <select id="size" name="size" required>
+                <option value="">Select a size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+
+            <label for="milk">Milk Option:</label>
+            <select id="milk" name="milk">
+                <option value="regular">Regular</option>
+                <option value="skim">Skim</option>
+                <option value="soy">Soy</option>
+                <option value="almond">Almond</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+            <label for="notes">Special Instructions:</label>
+            <textarea id="notes" name="notes" rows="3"></textarea>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+</body>
+</html>
